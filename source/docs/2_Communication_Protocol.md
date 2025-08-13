@@ -16,7 +16,7 @@ Parameters (Prm): Additional control data required for the command.
 
 ## 2.1 Sending Data from the User to the Controller
 
-The TX pin of the user’s device should be connected to the controller’s RX pin. The controller and the user’s system must share a common ground (GND). When the controller receives correct data, the **blue LED2** will blink once, indicating successful reception. If incorrect data is sent, **LED2** will remain steadily lit. The buzzer will emit two quick “beep-beep” sounds to indicate a data error.
+The TX pin of the user's device should be connected to the controller's RX pin. The controller and the user's system must share a common ground (GND). When the controller receives correct data, the **blue LED2** will blink once, indicating successful reception. If incorrect data is sent, **LED2** will remain steadily lit. The buzzer will emit two quick "beep-beep" sounds to indicate a data error.
 
 (1) Command Name: CMD\_ SERVO_MOVE, Command Value: 3, Data Length (Length):
 
@@ -131,7 +131,7 @@ Send Format:
 |--------------|-------------|---------|------------|
 | 0x55 0x55    | 0x02        | 0x0F    | None       |
 
-Return: The controller’s response contains: Parameter 1 – Low 8 bits of the voltage value, Parameter 2 – High 8 bits of the voltage value
+Return: The controller's response contains: Parameter 1 – Low 8 bits of the voltage value, Parameter 2 – High 8 bits of the voltage value
 
 | Frame Header | Data Length | Command | Parameters |
 |--------------|-------------|---------|------------|
@@ -139,7 +139,7 @@ Return: The controller’s response contains: Parameter 1 – Low 8 bits of the 
 
 ## 2.2 Data Sent by the Controller to User
 
-During operation, when the controller’s status changes, it will actively send data to the user via the serial port. For example, when an action group finishes running. There are multiple ways to operate the controller, such as using a PS2 controller, connecting via a Bluetooth module, or using the user’s custom serial interface. Hence, it is necessary for different control methods to be aware of the current status of the controller to facilitate proper management and operation. The following are the instructions that the controller returns to the user.
+During operation, when the controller's status changes, it will actively send data to the user via the serial port. For example, when an action group finishes running. There are multiple ways to operate the controller, such as using a PS2 controller, connecting via a Bluetooth module, or using the user's custom serial interface. Hence, it is necessary for different control methods to be aware of the current status of the controller to facilitate proper management and operation. The following are the instructions that the controller returns to the user.
 
 (1) Command Name: CMD \_ACTION_GROUP_RUN, Command Value: 6, Data Length (Length): 5
 

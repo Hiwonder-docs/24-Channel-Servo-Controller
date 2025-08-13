@@ -6,7 +6,7 @@
 
 This section employs the STM32 controller based on STC15W4K32S4 and a 24-channel servo controller for development, powered by a 7.4V lithium battery. Connect the serial port on the servo controller to the serial port on the STM32 controller.
 
-<img src="../_static/media/chapter_5/section_1/media/image4.png" class="common_img" />
+<img src="../_static/media/chapter_5/image4.png" class="common_img" />
 
 :::{Note}
 * The servo wiring shown above is for illustrative purposes only. For specific connection interfaces, please refer to the the following text.
@@ -27,17 +27,17 @@ In this case, commands are sent from the serial port to the servo controller, wh
 
 * **Run Program**
 
-Open the <img src="../_static/media/chapter_5/section_1/media/image5.png" /> download tool in [Appendix &gt; STM32 Software]().
+Open the <img src="../_static/media/chapter_5/image5.png" /> download tool in [Appendix &gt; STM32 Software]().
 
-<img src="../_static/media/chapter_5/section_1/media/image5.png" class="common_img" />
+<img src="../_static/media/chapter_5/image5.png" class="common_img" />
 
 Configure it as shown in the figure:
 
-<img src="../_static/media/chapter_5/section_1/media/image6.png" class="common_img" />
+<img src="../_static/media/chapter_5/image6.png" class="common_img" />
 
-Click <img src="../_static/media/chapter_5/section_1/media/image7.png" />. Locate and open the hex file stored in [STM32 Development &gt; Case 1 Single Servo Rotation Control &gt; PROJECT &gt; OPT]().
+Click <img src="../_static/media/chapter_5/image7.png" />. Locate and open the hex file stored in [STM32 Development &gt; Case 1 Single Servo Rotation Control &gt; PROJECT &gt; OPT]().
 
-<img src="../_static/media/chapter_5/section_1/media/image8.png" class="common_img" />
+<img src="../_static/media/chapter_5/image8.png" class="common_img" />
 
 After opening the program, click **"Start ISP"** to download the program to the STM32 microcontroller.
 
@@ -45,7 +45,7 @@ After opening the program, click **"Start ISP"** to download the program to the 
 When downloading the program, remove the jumper cap on the STM32 microcontroller and press the reset button. When the prompt "**Mission Complete, Anything OK**" appears in the lower right corner, it is successfully downloaded. Next, insert the jumper cap back into the STM32 microcontroller.
 :::
 
-<img src="../_static/media/chapter_5/section_1/media/image9.png" class="common_img" />
+<img src="../_static/media/chapter_5/image9.png" class="common_img" />
 
 After the download is completed, switch the 24-channel servo controller on. Press the reset button on the STM32 microcontroller. The servo 1 will start to rotate.
 
@@ -149,17 +149,17 @@ In this case, commands are sent from the serial port to the bus control board, w
 
 * **Run Program**
 
-Open the <img src="../_static/media/chapter_5/section_1/media/image5.png" /> download tool in [Appendix &gt; STM32 Software]().
+Open the <img src="../_static/media/chapter_5/image5.png" /> download tool in [Appendix &gt; STM32 Software]().
 
-<img src="../_static/media/chapter_5/section_1/media/image5.png" class="common_img" />
+<img src="../_static/media/chapter_5/image5.png" class="common_img" />
 
 Configure it as shown in the figure:
 
-<img src="../_static/media/chapter_5/section_1/media/image14.png" class="common_img" />
+<img src="../_static/media/chapter_5/image14.png" class="common_img" />
 
-Click <img src="../_static/media/chapter_5/section_1/media/image7.png" />. Locate and open the hex file stored in [STM32 Development&gt;Case 2 Single Servo Speed Control &gt; PROJECT &gt; OPT]().
+Click <img src="../_static/media/chapter_5/image7.png" />. Locate and open the hex file stored in [STM32 Development&gt;Case 2 Single Servo Speed Control &gt; PROJECT &gt; OPT]().
 
-<img src="../_static/media/chapter_5/section_1/media/image15.png" class="common_img" />
+<img src="../_static/media/chapter_5/image15.png" class="common_img" />
 
 After opening the program, click **"Start ISP"** to download the program to the STM32 microcontroller.
 
@@ -167,7 +167,7 @@ After opening the program, click **"Start ISP"** to download the program to the 
 When downloading the program, remove the jumper cap on the STM32 microcontroller and press the reset button. When the prompt "**Mission Complete, Anything OK**" appears in the lower right corner, it is successfully downloaded. Next, insert the jumper cap back into the STM32 microcontroller.
 :::
 
-<img src="../_static/media/chapter_5/section_1/media/image16.png" class="common_img" />
+<img src="../_static/media/chapter_5/image16.png" class="common_img" />
 
 After the download is completed, switch the servo controller on. Press the reset button on the STM32 microcontroller. The servo 1 will start to rotate.
 
@@ -276,17 +276,17 @@ In this case, commands are sent from the serial port to the servo controller, wh
 
 * **Run Program**
 
-Open the <img src="../_static/media/chapter_5/section_1/media/image5.png" /> download tool in [Appendix &gt; STM32 Software]().
+Open the <img src="../_static/media/chapter_5/image5.png" /> download tool in [Appendix &gt; STM32 Software]().
 
-<img src="../_static/media/chapter_5/section_1/media/image5.png" class="common_img" />
+<img src="../_static/media/chapter_5/image5.png" class="common_img" />
 
 Configure it as shown in the figure:
 
-<img src="../_static/media/chapter_5/section_1/media/image6.png" class="common_img" />
+<img src="../_static/media/chapter_5/image6.png" class="common_img" />
 
-Click <img src="../_static/media/chapter_5/section_1/media/image7.png" />. Locate and open the hex file stored in [STM32 Development &gt; Case 3 Multiple Servos Rotation Control &gt; PROJECT&gt; OPT]().
+Click <img src="../_static/media/chapter_5/image7.png" />. Locate and open the hex file stored in [STM32 Development &gt; Case 3 Multiple Servos Rotation Control &gt; PROJECT&gt; OPT]().
 
-<img src="../_static/media/chapter_5/section_1/media/image20.png" class="common_img" />
+<img src="../_static/media/chapter_5/image20.png" class="common_img" />
 
 After opening the program, click **"Start ISP"** to download the program to the STM32 microcontroller.
 
@@ -294,7 +294,7 @@ After opening the program, click **"Start ISP"** to download the program to the 
 When downloading the program, remove the jumper cap on the STM32 microcontroller and press the reset button. When the prompt "**Mission Complete, Anything OK**" appears in the lower right corner, it is successfully downloaded. Next, insert the jumper cap back into the STM32 microcontroller.
 :::
 
-<img src="../_static/media/chapter_5/section_1/media/image21.png" class="common_img" />
+<img src="../_static/media/chapter_5/image21.png" class="common_img" />
 
 After the download is completed, switch the 24-channel servo controller on. Press the reset button on the STM32 microcontroller. The servo 1 will start to rotate.
 
@@ -422,17 +422,17 @@ The servo deviation is caused by the interval between the teeth on the spline of
 
 * **Run Program**
 
-Open the <img src="../_static/media/chapter_5/section_1/media/image5.png" /> download tool in [2. Software &gt; STM32 Software]().
+Open the <img src="../_static/media/chapter_5/image5.png" /> download tool in [2. Software &gt; STM32 Software]().
 
-<img src="../_static/media/chapter_5/section_1/media/image5.png" class="common_img" />
+<img src="../_static/media/chapter_5/image5.png" class="common_img" />
 
 Configure it as shown in the figure:
 
-<img src="../_static/media/chapter_5/section_1/media/image6.png" class="common_img" />
+<img src="../_static/media/chapter_5/image6.png" class="common_img" />
 
-Click <img src="../_static/media/chapter_5/section_1/media/image7.png" />. Locate and open the hex file stored in [STM32 Development &gt; Case 4 Adjust Neutral Position and Deviation &gt; PROJECT&gt; OPT]().
+Click <img src="../_static/media/chapter_5/image7.png" />. Locate and open the hex file stored in [STM32 Development &gt; Case 4 Adjust Neutral Position and Deviation &gt; PROJECT&gt; OPT]().
 
-<img src="../_static/media/chapter_5/section_1/media/image26.png" class="common_img" />
+<img src="../_static/media/chapter_5/image26.png" class="common_img" />
 
 After opening the program, click **"Start ISP"** to download the program to the STM32 microcontroller.
 
@@ -440,7 +440,7 @@ After opening the program, click **"Start ISP"** to download the program to the 
 When downloading the program, remove the jumper cap on the STM32 microcontroller and press the reset button. When the prompt "**Mission Complete, Anything OK**" appears in the lower right corner, it is successfully downloaded. Next, insert the jumper cap back into the STM32 microcontroller.
 :::
 
-<img src="../_static/media/chapter_5/section_1/media/image27.png" class="common_img" />
+<img src="../_static/media/chapter_5/image27.png" class="common_img" />
 
 After the download is completed, switch the 24-channel servo controller on. Press the reset button on the STM32 microcontroller. The servo 1 will start to rotate.
 

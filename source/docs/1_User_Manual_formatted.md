@@ -240,15 +240,15 @@ The debugging explanation is based on ID1 servo, and other ID servos are the sam
 
 The three images represent the three basic positions of the servo (neutral position, minimum angle, and maximum angle). For demonstration, a servo arm is inserted as a reference (with the label on the right side of the servo arm as the initial position).
 
-<img src="../_static/media/chapter_1/image60.jpeg" class="common_img" />
+<img src="../_static/media/chapter_1/image60.jpeg" class="common_img" style="width:500px;"/>
 
 <p style="text-align:center">Neutral position: 90°servo angle, which is corresponding to the position of 1500</p>
 
-<img src="../_static/media/chapter_1/image61.jpeg" class="common_img" />
+<img src="../_static/media/chapter_1/image61.jpeg" class="common_img" style="width:500px;"/>
 
 <p style="text-align:center">Minimum position: 0°servo angle, which is corresponding to the position of 500</p>
 
-<img src="../_static/media/chapter_1/image62.jpeg" class="common_img" />
+<img src="../_static/media/chapter_1/image62.jpeg" class="common_img" style="width:500px;"/>
 
 <p style="text-align:center">Maximum position: 180°servo angle, which is corresponding to the position of 2500</p>
 
@@ -315,11 +315,11 @@ The controller should be turned on before connecting the Bluetooth debugging mod
 
 (3) If the LED lights are still flashing after 50 seconds, press the **"DEL"** button on the Bluetooth debugging module.
 
-<img src="../_static/media/chapter_1/image69.jpeg" class="common_img" />
+<img src="../_static/media/chapter_1/image69.jpeg" class="common_img" style="width:600px;"/>
 
 (4) Wait for the Bluetooth connection. When the LED light on the Bluetooth debugging module is on, the connection is successful.
 
-<img src="../_static/media/chapter_1/image70.jpeg" class="common_img" />
+<img src="../_static/media/chapter_1/image70.jpeg" class="common_img" style="width:600px;"/>
 
 (5) Open the PC software and select the connected `COM` interface. Do not connect if it is `COM1`, as it is the system communication interface of the computer. Choose the baud rate of 9600. If you choose the baud rate of 115200, you cannot control it. The buzzer will also sound during control. Click **"Connect Wireless"**, and the status button will turn green when the connection is successful.
 
@@ -475,9 +475,9 @@ For large deviation adjustment, the servo arm needs to be removed from the servo
 
 (1) Remove the shaft screw and then the servo arm.
 
-<img src="../_static/media/chapter_1/image96.jpeg" class="common_img" />
+<img src="../_static/media/chapter_1/image96.jpeg" class="common_img" style="width:600px;"/>
 
-<img src="../_static/media/chapter_1/image97.jpeg" class="common_img" />
+<img src="../_static/media/chapter_1/image97.jpeg" class="common_img" style="width:600px;"/>
 
 (2) Open the servo controller, and click **"Reset servo"**.
 
@@ -511,7 +511,7 @@ The specific control method is as follows:
 
 (4) Press the **"Run"** button on the controller to run the action group offline.
 
-<img src="../_static/media/chapter_1/image103.png" class="common_img" />
+<img src="../_static/media/chapter_1/image103.png" class="common_img" style="width:700px;"/>
 
 ## 1.8 Handle Control
 
