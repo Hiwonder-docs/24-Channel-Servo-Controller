@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Common.py API 接口说明文档'
+project = '24-Channel Servo Controller'
 copyright = '2025, Hiwonder'
 author = 'Hiwonder'
 release = 'v1.0'

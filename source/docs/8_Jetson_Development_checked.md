@@ -58,7 +58,7 @@ After running the program, the servo will continuously swing back and forth betw
 
 * **Program Brief Analysis**
 
-[Source Code]()
+[Source Code](../_static/source_code/Jetson_Development.zip)
 
 (1) Import Necessary Libraries
 
@@ -186,7 +186,7 @@ After the program runs, the servo rotates to position 500 at a speed of 1200 ms,
 
 * **Program Brief Analysis**
 
-[Source Code]()
+[Source Code](../_static/source_code/Jetson_Development.zip)
 
 (1) Import Necessary Libraries
 
@@ -249,7 +249,7 @@ After running the program, Servo 1 and Servo 2 will move back and forth between 
 
 * **Program Brief Analysis**
 
-[Source Code]()
+[Source Code](../_static/source_code/Jetson_Development.zip)
 
 (1) Import Necessary Libraries
 
@@ -258,6 +258,7 @@ After running the program, Servo 1 and Servo 2 will move back and forth between 
 import ServoControl
 import time
 ```
+
 The library includes the necessary modules for communicating with the 24-ch servo controller. You can use the predefined variables and functions in it to control the servo. In this example, the `setMorePWMServoMove()` method is mainly used to control multiple servos.
 
 {lineno-start=62}
@@ -286,6 +287,7 @@ def setBusServoMoveByArray(servos, servos_count, time):
         buf.append(pos_list[0])     
         buf.append(pos_list[1])
 ```
+
 According to the communication protocol, the frame header, data length, command, and the number of servos to be controlled are first sent to the serial port.
 
 {lineno-start=63}
@@ -294,6 +296,7 @@ According to the communication protocol, the frame header, data length, command,
     buf.append(servos_count*3+5) 
     buf.append(LOBOT_CMD_SERVO_MOVE)  
 ```
+
 Exception filtering for servo count and rotation time is performed to ensure that the 24-ch servo controller can correctly recognize the data sent via the serial port.
 
 {lineno-start=67}
@@ -308,6 +311,7 @@ Exception filtering for servo count and rotation time is performed to ensure tha
     buf.append(time_list[0])    
     buf.append(time_list[1])
 ```
+
 A for loop is used to send data from the `servos` list to the serial port. Set every two elements as one group: the first element is the servo ID, and the second is the target position. For example: `list = [1, 500, 2, 300]` means that servo ID 1 will move to position 500, and servo ID 2 will move to position 300. Finally, the `buf` data is sent to the serial port using the `write()` method.
 
 {lineno-start=77}
@@ -323,12 +327,14 @@ A for loop is used to send data from the `servos` list to the serial port. Set e
 
     serialHandle.write(buf)
 ```
+
 (2) UART Initialization
 
 {lineno-start=11}
 ```python
 serialHandle = serial.Serial("/dev/ttyTHS1", 9600)
 ```
+
 Create an instance of the servo control object and set the baud rate to 9600.
 
 (3) Control Servo Movement
@@ -344,6 +350,7 @@ if __name__ == '__main__':
         ServoControl.setPWMServoMoveByArray(servos, 2, 1000)
         time.sleep(2)
 ```
+
 In the main program of `PWMServoControl`, a `servos` queue is first created to set servo ID 1 to position 2500 and servo ID 2 to position 500. Then, the `setPWMServoMoreByarray()` function is called to move these two servos to their target positions within 1000 ms. After a 2-second delay, servo ID 1 is set to position 500 and servo ID 2 to position 2500. Then, the `setPWMServoMoreByArray()` function is called again to move the servos, also with a duration of 1000 ms.
 
 ### 8.2.4 Case 4 Central Position & Deviation Adjustment
@@ -374,7 +381,7 @@ The servo first returns to the central position. After a short delay, it rotates
 
 * **Program Brief Analysis**
 
-[Source Code]()
+[Source Code](../_static/source_code/Jetson_Development.zip)
 
 (1) Import Necessary Libraries
 
@@ -383,6 +390,7 @@ The servo first returns to the central position. After a short delay, it rotates
 import ServoControl
 import time
 ```
+
 The library includes the necessary modules for communicating with the 24-ch servo controller. You can use the predefined variables and functions in it to control the servo. In the `ServoControl` library file, the main method called is `setPWMServoMove()`.
 
 (2) UART Initialization
@@ -391,6 +399,7 @@ The library includes the necessary modules for communicating with the 24-ch serv
 ```python
 serialHandle = serial.Serial("/dev/ttyTHS1", 9600)
 ```
+
 Create an instance of the servo control object and set the baud rate to 9600.
 
 (3) Control Servo Movement
@@ -405,4 +414,5 @@ if __name__ == '__main__':
     while True:
         time.sleep(1)
 ```
+
 In the main program of `PWMServoMedAndBias`, a variable named `deviation` is first created to store the deviation value. The `setPWMServoMove()` function is initially called to move servo ID 1 to position 1500 within 800 ms. After a 2-second delay, the servo is moved again based on its previous position (1500) plus the `deviation` value, thereby achieving a software-based deviation adjustment.
