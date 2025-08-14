@@ -6,7 +6,7 @@
 
 This example uses an Jetson Nano controller and a 24-ch servo controller, powered by a 7.4V 6000mAh lithium battery for low-voltage servos. Connect the serial port of the 24-Channel Servo Controller to the serial port of the Jetson Nano controller.
 
-<img src="../_static/media/chapter_8/section_1/01/media/image3.jpeg" class="common_img" />
+<img src="../_static/media/chapter_8/image3.jpeg" class="common_img" />
 
 :::{Note}
 * When using Hiwonder's lithium battery, connect the battery cable with the red wire to the positive (+) terminal and the black wire to the negative (–) terminal of the DC port.
@@ -16,15 +16,15 @@ This example uses an Jetson Nano controller and a 24-ch servo controller, powere
 
 ### 8.1.2 Environment Configuration
 
-Install `MobaXterm` software on PC. The software package is stored in **"[Appendix -> Remote Desktop Connection Tool (for Raspberry Pi and Jetson)]()"**.
+Install `MobaXterm` software on PC. The software package is stored in **"[Appendix -> Remote Desktop Connection Tool (for Raspberry Pi and Jetson)](Appendix.md)"**.
 
-Drag the program and library file SDK into the Jetson Nano system image via `MobaXterm`. The software package is located under **"[Appendix -> Remote Desktop Connection Tool (for Raspberry Pi and Jetson)]()"**. For detailed instructions on how to use `MobaXterm`, refer to the corresponding document. In this example, the files are placed on the desktop.
+Drag the program and library file SDK into the Jetson Nano system image via `MobaXterm`. The software package is located under **"[Appendix -> Remote Desktop Connection Tool (for Raspberry Pi and Jetson)](Appendix.md)"**. For detailed instructions on how to use `MobaXterm`, refer to the corresponding document. In this example, the files are placed on the desktop.
 
 :::{Note}
 * Make sure the library files are placed in the same directory as the program.
 :::
 
-<img src="../_static/media/chapter_8/section_1/01/media/image4.png" class="common_img" />
+<img src="../_static/media/chapter_8/image4.png" class="common_img" />
 
 Open the command-line terminal and enter the following command to install the `pyserial` library:
 
@@ -69,6 +69,7 @@ The library includes the necessary modules for communicating with the servo cont
 import ServoControl
 import time
 ```
+
 {lineno-start=13}
 ```python
  
@@ -95,6 +96,7 @@ def setBusServoMove(servo_id, servo_pulse, time):
 
     serialHandle.write(buf)
 ```
+
 According to the communication protocol, the frame header, data length, command, and the number of servos to be controlled are first sent to the serial port.
 
 {lineno-start=15}
@@ -104,6 +106,7 @@ According to the communication protocol, the frame header, data length, command,
     buf.append(LOBOT_CMD_SERVO_MOVE)  
     buf.append(0x01)  
 ```
+
 Next, the time parameter passed in is filtered to ensure it falls within the range of (0, 30000). Values outside this range are clamped to 0 and 30000, respectively. This ensures that after the data is sent over the serial port, the controller can correctly recognize it. Then, the time parameter is split into high and low bytes using `list()`, where `'little'` indicates low byte first. These two bytes are then sent to the serial port.
 
 {lineno-start=20}
@@ -114,6 +117,7 @@ Next, the time parameter passed in is filtered to ensure it falls within the ran
     buf.append(time_list[0])
     buf.append(time_list[1]) 
 ```
+
 After that, the ID and position values are also filtered. If the incoming ID is less than 1 or greater than 254, it is clamped to 1 or 254, respectively. The position value is handled similarly: values below 0 are set to 0. Then, send the servo rotation position to the serial port in the form of two bytes.
 
 {lineno-start=26}
@@ -127,18 +131,21 @@ After that, the ID and position values are also filtered. If the incoming ID is 
     buf.append(pulse_list[0])
     buf.append(pulse_list[1]) 
 ```
+
 Finally, the `buf` data is sent to the serial port using the `write()` method.
 
 {lineno-start=35}
 ```python
     serialHandle.write(buf)
 ```
+
 (2) UART Initialization
 
 {lineno-start=11}
 ```python
 serialHandle = serial.Serial("/dev/ttyTHS1", 9600)   
 ```
+
 Create an instance of the servo control object and set the baud rate to 9600.
 
 (3) Control Servo Movement
@@ -152,6 +159,7 @@ if __name__ == '__main__':
         ServoControl.setPWMServoMove(1, 2500, 1000)
         time.sleep(2)
 ```
+
 After the main program runs in `PWMServoControl`, it calls the `setPWMServoMove()` function to control Servo ID 1 to move from position 500 to 2500.
 
 ### 8.2.2 Case 2 Control a Single Servo’s Speed
@@ -187,6 +195,7 @@ After the program runs, the servo rotates to position 500 at a speed of 1200 ms,
 import ServoControl
 import time
 ```
+
 The library includes the necessary modules for communicating with the 24-ch servo controller. You can use the predefined variables and functions in it to control the servo. In the `ServoControl` library, the main method used is `setPWMServoMove()`, which changes the servo speed by adjusting the movement duration.
 
 (2) UART Initialization
@@ -195,6 +204,7 @@ The library includes the necessary modules for communicating with the 24-ch serv
 ```python
 serialHandle = serial.Serial("/dev/ttyTHS1", 9600)
 ```
+
 Create an instance of the servo control object and set the baud rate to 9600.
 
 (3) Control Servo Movement
@@ -212,6 +222,7 @@ if __name__ == '__main__':
         ServoControl.setPWMServoMove(1, 2500, 400)
         time.sleep(1)
 ```
+
 In the main program of `PWMServoControl`, the `setPWMServoMove()` function is first called to move Servo ID 1 from position 500 to 2500 over 1200 ms. Then, Servo ID 1 is moved back from position 2500 to 500 over 400 ms. When the rotation angle is the same, a shorter duration results in a higher speed.
 
 ### 8.2.3 Case 3 Control Multiple Servos
