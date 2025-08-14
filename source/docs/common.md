@@ -1,27 +1,4 @@
-  # Common.py API 接口说明文档
-
-  ## 📋 目录
-
-- [概述](#概述)
-- [依赖库](#依赖库)
-- [快速开始](#快速开始)
-- [API 接口详细说明](#api-接口详细说明)
-- [颜色定义常量](#1-颜色定义常量)
-- [日志输出函数](#2-日志输出函数)
-- [图像转换函数](#3-图像转换函数)
-- [配置文件处理函数](#4-配置文件处理函数)
-- [图像处理函数](#5-图像处理函数)
-- [颜色管理类](#6-颜色管理类)
-- [图像标注函数](#7-图像标注函数)
-- [几何计算函数](#8-几何计算函数)
-- [姿态变换函数](#9-姿态变换函数)
-- [矩阵变换函数](#10-矩阵变换函数)
-- [使用示例](#使用示例)
-- [最佳实践](#最佳实践)
-- [常见问题](#常见问题)
-- [注意事项](#注意事项)
-- [版本信息](#版本信息)
-- [更新日志](#更新日志)
+# Common.py API 接口说明文档
 
 ## 📖 概述
 
@@ -48,6 +25,7 @@ import random       # 随机数生成库
 ```
 
 ### 安装依赖
+
 ```bash
 pip install opencv-python numpy pyyaml transforms3d
 ```
@@ -55,6 +33,7 @@ pip install opencv-python numpy pyyaml transforms3d
 ## 🚀 快速开始
 
 ### 基本导入
+
 ```python
 from sdk.common import cv2_image2ros, qua2rpy, distance, loginfo
 
@@ -66,6 +45,7 @@ dist = distance((0, 0), (3, 4))  # 返回 5.0
 ```
 
 ### 图像处理示例
+
 ```python
 import cv2
 from sdk.common import cv2_image2ros, get_area_max_contour
@@ -84,6 +64,7 @@ max_contour, area = get_area_max_contour(contours, threshold=100)
 ### 1. 颜色定义常量
 
 #### `range_rgb` 字典
+
 定义了常用颜色的BGR值范围，用于图像处理中的颜色识别和过滤。
 
 ```python
@@ -112,6 +93,7 @@ upper_red = np.array([10, 255, 255])
 ### 2. 日志输出函数
 
 #### `loginfo(msg)`
+
 输出带颜色的ROS日志信息，便于调试和监控。
 
 **参数：**
@@ -131,6 +113,7 @@ loginfo("坐标转换完成")
 ### 3. 图像转换函数
 
 #### `cv2_image2ros(image, frame_id='')`
+
 将OpenCV图像转换为ROS Image消息格式。
 
 **参数：**
@@ -157,6 +140,7 @@ pub.publish(ros_img)
 ```
 
 #### `bgr8_to_jpeg(value, quality=75)`
+
 将BGR8格式的图像数据转换为JPEG格式。
 
 **参数：**
@@ -182,6 +166,7 @@ with open("output.jpg", "wb") as f:
 ### 4. 配置文件处理函数
 
 #### `get_yaml_data(yaml_file)`
+
 读取YAML配置文件并返回解析后的数据。
 
 **参数：**
@@ -554,6 +539,7 @@ print(f"变换矩阵:\n{transform_matrix}")
 ```
 
 #### `xyz_rot_to_mat(xyz, rot)`
+
 将位置和旋转矩阵转换为4x4变换矩阵。
 
 **参数：**
