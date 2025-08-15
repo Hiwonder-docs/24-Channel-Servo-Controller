@@ -69,7 +69,7 @@ In this case, commands are sent to the 24-channel servo controller to control th
 
 (1) Open the program `LobotServoController.ino` stored in **"**[Arduino Development/Case 1 PWM Servo Rotation Control](../_static/source_code/Arduino_Development.zip)**"**.
 
-(2) After opening the program, add the library file based on "**[4.1.3 Add Library File](#anchor_4_1_3)**".
+(2) After opening the program, add the library file based on "[4.1.3 Add Library File](#anchor_4_1_3)".
 
 Note: You must add the library file when running the program for the first time. Otherwise, the program will report an error.
 

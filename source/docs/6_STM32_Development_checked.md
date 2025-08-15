@@ -531,7 +531,7 @@ void uartInit(u32 bound)
 
 Before running the main program, define the servo deviation parameter. Then, control the servo 1 to rotate to the neutral position. After a two-second delay, add a deviation to the neutral position, allowing the servo to rotate to the deviation position and maintain that position.
 
-{lineno-start=}
+{lineno-start=12}
 ```c
  int main(void)
  {

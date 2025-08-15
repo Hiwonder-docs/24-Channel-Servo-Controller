@@ -13,23 +13,47 @@ This section employs an open-source servo controller, a STC15W4K32S4 microcontro
 *   For serial connections, connect the `RX` pin of the open-source servo controller to the `TX` pin of the 24-channel servo controller. Connect the `TX` pin of the open-source board to the `RX` pin of the 24-channel controller, and connect `GND` to `GND`.
 :::
 
-<img src="../_static/media/chapter_6/image5.jpg" class="common_img" style="width:600px;"/>
-
-<img src="../_static/media/chapter_6/image6.jpg" class="common_img" style="width:600px;"/>
-
-<img src="../_static/media/chapter_6/image7.jpg" class="common_img" style="width:600px;"/>
-
-<img src="../_static/media/chapter_6/image7.jpg" class="common_img" style="width:600px;"/>
+<p style="margin:0 auto 24px;width:100%">
+<img  src="../_static/media/chapter_6/image5.jpg" style="width:24%" />
+<img  src="../_static/media/chapter_6/image6.jpg" style="width:24%;" />
+<img src="../_static/media/chapter_6/image7.jpg"  style="width:24%"/>
+<img src="../_static/media/chapter_6/image8.jpg" style="width:24%"/>
+</p>
 
 The pin wiring method is shown in the table below:
 
-| 24-ch servo controller | Picture for 24-ch servo controller | Open-source servo controller | Picture for open-source servo controller |
-| :--- | :--- | :--- | :--- |
-| RX | <img src="../_static/media/chapter_6/image8.jpg" class="common_img" /> | TX | <img src="../_static/media/chapter_6/image5.jpg" class="common_img" /> |
-| TX | RX |
-| GND | GND |
-| Power Input + | <img src="../_static/media/chapter_6/image8.jpg" class="common_img" /> | Servo Interface + | <img src="../_static/media/chapter_6/image6.jpg" class="common_img" /> |
-| Power Input - | Servo Interface - |
+<table border="1">
+  <tr>
+    <th>24-ch servo controller</th>
+    <th>Picture for 24-ch servo controller</th>
+    <th>Open-source servo controller</th>
+    <th>Picture for open-source servo controller</th>
+  </tr>
+  <tr>
+    <td>RX</td>
+    <td rowspan="3"><img src="../_static/media/chapter_6/image7.jpg" class="common_img" /></td>
+    <td>TX</td>
+    <td rowspan="3"><img src="../_static/media/chapter_6/image5.jpg" class="common_img" /></td>
+  </tr>
+  <tr>
+    <td>TX</td>
+    <td>RX</td>
+  </tr>
+  <tr>
+    <td>GND</td>
+    <td>GND</td>
+  </tr>
+  <tr>
+    <td>Power Input +</td>
+    <td rowspan="2"><img src="../_static/media/chapter_6/image8.jpg" class="common_img" /></td>
+    <td>Servo Interface +</td>
+    <td rowspan="2"><img src="../_static/media/chapter_6/image6.jpg" class="common_img" /></td>
+  </tr>
+  <tr>
+    <td>Power Input -</td>
+    <td>Servo Interface -</td>
+  </tr>
+</table>
 
 :::{Note}
 *   When using Hiwonder's lithium battery, connect the battery cable with the red wire to the positive (+) terminal and the black wire to the negative (–) terminal of the DC port.
