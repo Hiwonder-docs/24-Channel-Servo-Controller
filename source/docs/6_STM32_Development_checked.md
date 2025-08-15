@@ -429,9 +429,7 @@ The servo deviation is caused by the interval between the teeth on the spline of
 
 * **Run Program**
 
-Open the <img src="../_static/media/chapter_5/image5.png" /> download tool in [2. Software &gt; STM32 Software](Appendix.md).
-
-<img src="../_static/media/chapter_5/image5.png" class="common_img" />
+Open the <img src="../_static/media/chapter_5/image5.png" /> download tool in [Appendix &gt; STM32 Software](Appendix.md).
 
 Configure it as shown in the figure:
 
