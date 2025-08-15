@@ -29,8 +29,6 @@ In this case, commands are sent from the serial port to the servo controller, wh
 
 Open the <img src="../_static/media/chapter_5/image5.png" /> download tool in [Appendix &gt; STM32 Software](Appendix.md).
 
-<img src="../_static/media/chapter_5/image5.png" class="common_img" />
-
 Configure it as shown in the figure:
 
 <img src="../_static/media/chapter_5/image6.png" class="common_img" />
@@ -154,8 +152,6 @@ In this case, commands are sent from the serial port to the bus control board, w
 * **Run Program**
 
 Open the <img src="../_static/media/chapter_5/image5.png" /> download tool in [Appendix &gt; STM32 Software](Appendix.md).
-
-<img src="../_static/media/chapter_5/image5.png" class="common_img" />
 
 Configure it as shown in the figure:
 
@@ -285,8 +281,6 @@ In this case, commands are sent from the serial port to the servo controller, wh
 * **Run Program**
 
 Open the <img src="../_static/media/chapter_5/image5.png" /> download tool in [Appendix &gt; STM32 Software](Appendix.md).
-
-<img src="../_static/media/chapter_5/image5.png" class="common_img" />
 
 Configure it as shown in the figure:
 
