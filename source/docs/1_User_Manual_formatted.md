@@ -137,7 +137,7 @@ connect the red wire to **"+"**, and the black wire to **"-"**. The positive and
 
 * **Language and servo selection**
 
-(1) Select the display language of the interface and the servo connected.
+Select the display language of the interface and the servo connected.
 
 | Icon                                                 | Function Description                                                                                                                                                                                                |
 |:-----------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -148,7 +148,7 @@ connect the red wire to **"+"**, and the black wire to **"-"**. The positive and
 
 * **Device connection area**
 
-(1) In this area, you can connect the servo controller and check its connection status.
+In this area, you can connect the servo controller and check its connection status.
 
 | Icon                                                 | Function Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |:-----------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -157,7 +157,7 @@ connect the red wire to **"+"**, and the black wire to **"-"**. The positive and
 
 * **Servo control area**
 
-(1) You can change the corresponding servo values to adjust the rotation position of the servo.
+You can change the corresponding servo values to adjust the rotation position of the servo.
 
 <img src="../_static/media/chapter_1/image27.png" class="common_img" />
 
@@ -169,7 +169,7 @@ connect the red wire to **"+"**, and the black wire to **"-"**. The positive and
 
 * **Action details list**
 
-(1) Check the execution time and servo parameters of the action.
+Check the execution time and servo parameters of the action.
 
 <img src="../_static/media/chapter_1/image31.png" class="common_img" />
 
@@ -183,7 +183,7 @@ connect the red wire to **"+"**, and the black wire to **"-"**. The positive and
 
 * **Action group setting**
 
-(1) Run, open, add, delete, modify, and view action groups and action group files.
+Run, open, add, delete, modify, and view action groups and action group files.
 
 | Icon                                                 | Function Description                                                                                                                                                                                       |
 |:-----------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -519,7 +519,7 @@ The specific control method is as follows:
 
 * **Required Accessories**
 
-(1) The required accessories for handle control is shown below:
+The required accessories for handle control is shown below:
 
 | Name                                                | Qty |
 |:----------------------------------------------------|:---:|
@@ -666,13 +666,13 @@ Please locate the **PWM Servo-V1.0.1.apk** installation package in [Appendix -\>
 Drag the slider or click the buttons on both sides to control the angle of servo rotation.
 
 * **Menu Bar**
-
-| <img src="../_static/media/chapter_1/image124.png" /> | Call the downloaded action group files in the controller |
-|:----------------------------------------------------------------------|:---------------------------------------------------------|
-| <img src="../_static/media/chapter_1/image125.png" /> | Reset all servos to position 500                         |
-| <img src="../_static/media/chapter_1/image126.png" /> | Display app version and other information                |
-| <img src="../_static/media/chapter_1/image127.png" /> | Display Bluetooth connection and connection status       |
-| <img src="../_static/media/chapter_1/image124.png" /> | Call the downloaded action group files in the controller |
+| Icon                                                         | Function Description                                     |
+| :----------------------------------------------------------- | :------------------------------------------------------- |
+| <img src="../_static/media/chapter_1/image124.png" width="70px"/> | Call the downloaded action group files in the controller |
+| <img src="../_static/media/chapter_1/image125.png" width="70px"/> | Reset all servos to position 500                         |
+| <img src="../_static/media/chapter_1/image126.png" width="70px"/> | Display app version and other information                |
+| <img src="../_static/media/chapter_1/image127.png" width="70px"/> | Display Bluetooth connection and connection status       |
+| <img src="../_static/media/chapter_1/image124.png" width="70px"/> | Call the downloaded action group files in the controller |
 
 ### 1.9.4 Single Mode Interface Introduction
 
@@ -688,12 +688,12 @@ Slide the slider to control the angle of servo rotation.
 
 * **Menu Bar**
 
-| Icon                                                                  | Function Description                                     |
-|:----------------------------------------------------------------------|:---------------------------------------------------------|
-| <img src="../_static/media/chapter_1/image124.png" /> | Call the downloaded action group files in the controller |
-| <img src="../_static/media/chapter_1/image125.png" /> | Reset all servos to position 500                         |
-| <img src="../_static/media/chapter_1/image126.png" /> | Display app version and other information                |
-| <img src="../_static/media/chapter_1/image127.png" /> | Display Bluetooth connection and connection status       |
+| Icon                                                         | Function Description                                     |
+| :----------------------------------------------------------- | :------------------------------------------------------- |
+| <img src="../_static/media/chapter_1/image124.png" width="70px" /> | Call the downloaded action group files in the controller |
+| <img src="../_static/media/chapter_1/image125.png" width="70px"/> | Reset all servos to position 500                         |
+| <img src="../_static/media/chapter_1/image126.png" width="70px" /> | Display app version and other information                |
+| <img src="../_static/media/chapter_1/image127.png" width="70px"/> | Display Bluetooth connection and connection status       |
 
 ## 1.10 Specification
 

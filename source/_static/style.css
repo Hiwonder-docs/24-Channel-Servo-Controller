@@ -64,7 +64,9 @@ table td{
 table{
     min-width: 50%;
 }
-
+.highlight span.err{
+    border:none;
+}
 .common_img{
     display: block;
     margin: 0 auto 24px;

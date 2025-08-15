@@ -190,6 +190,7 @@ After running the program, the servo will rotate from position 500 to 2500 at a 
 [Source Code](../_static/source_code/Arduino_Development.zip)
 
 (1) Import the Required Function Package
+
 {lineno-start=1}
 
 ```python
@@ -199,6 +200,7 @@ After running the program, the servo will rotate from position 500 to 2500 at a 
 The function package mainly encapsulates various function modules for the 24-channel servo controller communication. The variables and functions defined in it can be used to control the servos.
 
 (2) Initialize Serial Port
+
 {lineno-start=3}
 
 ```python
